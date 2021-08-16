@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Delivery Logistics Platform</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" type="text/css" rel="stylesheet">
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+    <script src="js/gmaps.js"></script>
+</head>
+<body>
+    <div class="flex flex-col h-screen">
+        <nav class="bg-indigo-600 shadow-lg">
+            <div class="container mx-auto">
+                <div class="sm:flex justify-around">
+                    <a href="/static/" title="Home" class="text-white text-2xl font-bold p-3">Food Delivery Logistics Platform</a>
+                </div>
+            </div>
+        </nav>
+        <div class="flex-1 bg-red-500" id="map"></div>
+        <div class="flex-none h-72 overflow-scroll divide-gray-200">
+            <table class="min-w-full divide-y divide-gray-200" id="offers-table">
+                <thead class="bg-gray-50">
+                <tr>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        ID
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Order ID
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Restaurant ID
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Customer ID
+                    </th>
+                </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200"></tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Insert Google Maps -- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1Ztfd0lOSQAg4PR3YgS5FY-h7uujPoeA&callback=initMap&libraries=&v=weekly" async></script>
+</body>
+</html>
